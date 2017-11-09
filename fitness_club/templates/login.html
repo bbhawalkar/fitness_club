@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="../css/style.css" rel="stylesheet">
+	<style>
+	#signup{
+	padding:25px;
+	}
+	</style
+</head>
+
+<body class="container">
+<div class="card card-container">
+
+
+<form action="/fitness" method="post">
+    <p class="h5 text-center mb-4">Sign in</p>
+
+    <div class="md-form">
+        <i class="fa fa-envelope prefix grey-text"></i>
+        <input type="text" id="defaultForm-email" name="email" class="form-control">
+        <label for="defaultForm-email">Your email</label>
+    </div>
+
+    <div class="md-form">
+        <i class="fa fa-lock prefix grey-text"></i>
+        <input type="password" id="defaultForm-pass" name="password" class="form-control">
+        <label for="defaultForm-pass">Your password</label>
+    </div>
+
+	<div class="text-center">
+	    <button class="btn btn-default btn-block" name="submit">Login</button>
+	</div>
+	</br>
+
+	<a href="/forgotpassword">
+		<div class="text-center">Forgot Password?</div>
+	</a>
+	</br>
+
+</form>
+</div>
+</br>
+
+	<div class="card card-container">
+		<div class="text-center" id="signup">
+		Don't have an account?<a href="/signup">Sign up</a>
+		</div>	
+	</div>
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+</body>
+
+</html>

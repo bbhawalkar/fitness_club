@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="club">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>BMI Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="../css/style.css" rel="stylesheet">
+	<style>
+	#left {
+	float: left;
+	width: 30%;
+	overflow: hidden;
+	}
+	</style>
+</head>
+
+<body class="container" ng-controller="bmiController">
+
+ <!--Section: Team v.1-->
+
+ <!-- Form login -->
+</br>
+</br>
+</br>
+ <div class="row">
+ <div class="col-lg-5 mb-4">
+
+<form>
+</br>
+    <p class="h5 text-center mb-4">BMI Calculator</p>
+
+    <div class="md-form">
+        <input type="text" name="weight" class="form-control" ng-model="weight" placeholder="Enter weight in Kgs">
+    </div>
+
+    <div class="md-form">
+        <input type="text" name="height" class="form-control" ng-model="height" placeholder="Enter Height in feet e.g. 5.7 ">
+     </div>
+
+</form>
+<div class="card">
+    <div class="card-header bg-default lighten-1 white-text">
+        BMI result
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"><i>Your BMI is </i> : <b>  {{parseFloat((((weight*2.20462)*0.45)/(((height*12)*0.025)*((height*12)*0.025)))).toFixed(2) }}</b> kg/m<sup>2</sup></h4>
+        <p class="card-title text-lg-left">  </p>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-7 font-weight-bold">
+
+<table class="table table-responsive table-bordered table-hover">
+  <thead>
+  <caption>
+  Body mass index (BMI) threshold values
+  </caption>
+    <tr class="btn-warning">
+      <th>BMI(kg/m<sup>2</sup>)</th>
+      <th>Weight Classification</th>
+      <th>Obesity Classification</th>
+      <th>Relative Risk of Disease</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>< 18.5</td>
+      <td>Underweight</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>18.5 – 24.9 </td>
+      <td>Normal</td>
+      <td></td>
+      <td></td>
+    </tr>
+	<tr>
+      <td>25.0 – 29.9 </td>
+      <td>Overweight</td>
+      <td></td>
+      <td>Increased</td>
+    </tr>
+	<tr>
+      <td>30.0 – 34.9 </td>
+      <td>Obese</td>
+      <td>Obesity Class I</td>
+      <td>High</td>
+    </tr>
+	<tr>
+      <td>35.0 – 39.9 </td>
+      <td>Obese</td>
+      <td>Obesity Class II</td>
+      <td>Very High</td>
+    </tr>
+	<tr>
+      <td> ≥ 40.0 </td>
+      <td>Extremely obese</td>
+      <td>Obesity Class III</td>
+      <td>Extremely High</td>
+    </tr>
+	</tbody>
+</table>
+
+</div>
+</div>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+</body>
+
+
+</html>

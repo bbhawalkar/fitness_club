@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+      <title>Fitness Calculator</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
+      <script type="text/javascript" src="../scripts/knockout-min.js"></script>
+      <script type="text/javascript" src="../scripts/calculators.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+      <link href="../css/bootstrap.min.css" rel="stylesheet">
+      <link href="../css/mdb.min.css" rel="stylesheet">
+      <link href="../css/style.css" rel="stylesheet">
+      <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/pepper-grinder/jquery-ui.css" />
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $("#accordion").accordion();
+        $("#tab").tabs();
+      });
+      </script>
+  </head>
+
+  <body class="container fluid">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-default">
+            <a class="navbar-brand" href="/"><strong>Fitness Club</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/bmi">BMI</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="/sample">Sample</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+  <br />
+
+      <h1 align="center" class="well">Fitness Calculators</h1>
+      <hr><br/>
+      <div class="row">
+
+        <div class="border border-primary">
+        <p><label for="gender" class="">gender</label>
+        <select data-bind="value: gender, valueUpdate: 'afterkeydown'" id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select></p>
+        </div>
+        <br/>
+
+        <div class="md-form">
+        <p><input data-bind="value: age, valueUpdate: 'afterkeydown'" type="text" min="1" max="120" name="age" id="age"/>
+        <label for="age" class="">Age</label></p>
+        </div>
+
+        <div class="md-form">
+        <p><input data-bind="value: weight, valueUpdate: 'afterkeydown'" type="text" name="weight" id="weight">
+        <label for="weight" class="">Weight</label></p>
+        </div>
+
+        <div>
+        <p><label for="height"  class="" > height </label>
+        <select data-bind="value: height, valueUpdate: 'afterkeydown'" id="height" name="height" >
+        <option value="122">4ft 0in (122cm)</option>
+        <option value="124">4ft 1in (124cm)</option>
+        <option value="127">4ft 2in (127cm)</option>
+        <option value="130">4ft 3in (130cm)</option>
+        <option value="132">4ft 4in (132cm)</option>
+        <option value="135">4ft 5in (135cm)</option>
+        <option value="137">4ft 6in (137cm)</option>
+        <option value="140">4ft 7in (140cm)</option>
+        <option value="142">4ft 8in (142cm)</option>
+        <option value="145">4ft 9in (145cm)</option>
+        <option value="147">4ft 10in (147cm)</option>
+        <option value="150">4ft 11in (150cm)</option>
+        <option value="152">5ft 0in (152cm)</option>
+        <option value="155">5ft 1in (155cm)</option>
+        <option value="157">5ft 2in (157cm)</option>
+        <option value="160">5ft 3in (160cm)</option>
+        <option value="163">5ft 4in (163cm)</option>
+        <option value="165">5ft 5in (165cm)</option>
+        <option value="168">5ft 6in (168cm)</option>
+        <option value="170">5ft 7in (170cm)</option>
+        <option value="173">5ft 8in (173cm)</option>
+        <option value="175">5ft 9in (175cm)</option>
+        <option value="178">5ft 10in (178cm)</option>
+        <option value="180">5ft 11in (180cm)</option>
+        <option value="183">6ft 0in (183cm)</option>
+        <option value="185">6ft 1in (185cm)</option>
+        <option value="188">6ft 2in (188cm)</option>
+        <option value="191">6ft 3in (191cm)</option>
+        <option value="193">6ft 4in (193cm)</option>
+        <option value="196">6ft 5in (196cm)</option>
+        <option value="198">6ft 6in (198cm)</option>
+        <option value="201">6ft 7in (201cm)</option>
+        <option value="203">6ft 8in (203cm)</option>
+        <option value="206">6ft 9in (206cm)</option>
+        <option value="208">6ft 10in (208cm)</option>
+        <option value="211">6ft 11in (211cm)</option>
+        <option value="213">7ft 0in (213cm)</option>
+        <option value="216">7ft 1in (216cm)</option>
+        <option value="218">7ft 2in (218cm)</option>
+        <option value="221">7ft 3in (221cm)</option>
+        <option value="224">7ft 4in (224cm)</option>
+        <option value="226">7ft 5in (226cm)</option>
+        <option value="229">7ft 6in (229cm)</option>
+        <option value="231">7ft 7in (231cm)</option>
+        <option value="234">7ft 8in (234cm)</option>
+        <option value="236">7ft 9in (236cm)</option>
+        <option value="239">7ft 10in (239cm)</option>
+        <option value="241">7ft 11in (241cm)</option>
+        <option value="244">8ft 0in (244cm)</option>
+      </select></p>
+        </div>
+
+        <div class="col-lg-12 mb-12">
+
+        <br />
+        <!--span  -->
+        <div class="tabs-wrapper">
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link waves-light active" data-toggle="tab" href="#bmr" role="tab">Basal Metabolic Rate</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#rmr" role="tab">Resting Metabolic Rate</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#dcb" role="tab">Daily Calories Burned</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#cbra" role="tab">Calories Burned by Activity</a>
+            </li>
+        </ul>
+        </div>
+        <!-- span -->
+        <br/>
+
+        <div class="tab-content card">
+          <!--Panel 1-->
+          <div class="card-header bg-default lighten-1 white-text">
+          <h5> Result </h5>
+          </div>
+          <div class="tab-pane fade in show active card-body" align="center" id="bmr" role="tabpanel">
+            <br>
+            <h3>Basal Metabolic Rate</h3>
+              <p>
+              <aside >
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>This is the amount of calories that you burn while you are at complete rest and not digesting any food.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </aside>
+              </p>
+              <p>Your BMR is: <strong data-bind="text:bmr"></strong></p>
+          </div>
+          <!--/.Panel 1-->
+
+          <!--Panel 2-->
+
+          <div class="tab-pane fade card-body" align="center" id="rmr" role="tabpanel">
+              <br>
+              <h3>Resting Metabolic Rate</h3>
+              <p>
+                <aside >
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>This is the amount of calories that you burn while you are at complete rest but still digesting food.<br /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </aside>
+              </p>
+              <p>Your RMR is: <strong data-bind="text:rmr"></strong></p>
+          </div>
+          <!--/.Panel 2-->
+
+          <!--Panel 3-->
+          <div class="tab-pane fade card-body" align="center" id="dcb" role="tabpanel">
+              <br>
+              <h3>Daily Calories Burned</h3>
+              <p>
+                <aside >
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>The total amount of calories that you burn during an average day.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </aside>
+              </p>
+              <p>
+              <select data-bind="value: activitylevelfactor">
+              <option value="1.2">Sedentary</option>
+              <option value="1.375">Lightly Active</option>
+              <option value="1.55">Moderately Active</option>
+              <option value="1.725">Very Active</option>
+              <option value="1.9">Extremely Active</option>
+              </select>
+             </p>
+              <p>Your Daily Calories Burned is: <strong data-bind="text:dcb"></strong></p>
+          </div>
+          <!--/.Panel 3-->
+
+          <!--.Panel 4-->
+          <div class="tab-pane fade card-body" id="cbra" role="tabpanel">
+            <br>
+            <div>
+            <div align="center">
+              <h3>Calculate Your Calories Burned by Activity</h3>
+              <p>
+                <aside >
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>The calorie burn for over 600 different activities.<br /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </aside>
+              </p>
+            </div>
+             <div class="row">
+               <div class="col-lg-3 mb-4">
+               <!-- <p align="left"><lable for"act">Activity Category </lable></p> -->
+               </div>
+               <div class="col-lg-2 mb-4">
+               <p align="left"><lable for"act">Activity Category </lable></p>
+               </div>
+               <div class="col-lg-7 mb-4">
+               <select align="center" style="width: 40%" id="act" data-bind="options: availableActivities, value: selectedActivity"></select>
+               </div>
+             </div>
+             <div class="row">
+               <div class="col-lg-3 mb-4">
+               <!-- <p align="left"><lable for"act">Activity Category </lable></p> -->
+               </div>
+               <div class="col-lg-2 mb-4">
+               <p align="left"><lable for"detact" >Detailed Activity </lable></p>
+               </div>
+               <div class="col-lg-7 mb-4">
+               <select align="center" style="width: 40%" id="detact" data-bind="options: availableDetailedActivities, optionsText: 'name', optionsValue: 'value', value: selectedDetailActivity"></select>
+               </div>
+             </div>
+               <p align="center">You burned an estimated <strong data-bind="text:abcb"></strong> calories.</p>
+             </div>
+            </div>
+          </div>
+          <!--/.Panel 4-->
+          </div>
+        </div>
+        </div>
+        <br/>
+
+        <!-- SCRIPTS -->
+        <!-- JQuery -->
+        <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="../js/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="../js/mdb.min.js"></script>
+    </body>
+</html>

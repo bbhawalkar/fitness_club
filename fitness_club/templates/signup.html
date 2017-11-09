@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body class="container responsive">
+
+ <!--Section: Team v.1-->
+<div class="card">
+<div class="card-body">
+
+ <!-- Form register -->
+<form action="/register" method="post">
+    <p class="h5 text-center mb-4">Sign up</p>
+
+    <div class="md-form">
+        <i class="fa fa-user prefix grey-text"></i>
+        <input type="text" id="orangeForm-name" class="form-control" name="fname">
+        <label for="orangeForm-name">First name</label>
+    </div>
+
+    <div class="md-form">
+        <i class="fa fa-user prefix grey-text"></i>
+        <input type="text" id="orangeForm-name" class="form-control" name="lname">
+        <label for="orangeForm-name">Last name</label>
+    </div>
+
+    <div class="md-form">
+        <i class="fa fa-user prefix grey-text"></i>
+        <input type="text" id="orangeForm-age" class="form-control" name="age">
+        <label for="orangeForm-age">age</label>
+    </div>
+
+    <div class="md-form">
+        <i class="fa fa-user prefix grey-text"></i>
+        <input type="text" id="orangeForm-weight" class="form-control" name="weight">
+        <label for="orangeForm-weight">weight</label>
+    </div>
+
+    <div class="md-form">
+        <i class="fa fa-user prefix grey-text"></i>
+        <input type="text" id="orangeForm-height" class="form-control" name="height">
+        <label for="orangeForm-height">height in cm</label>
+    </div>
+
+    <!-- <fieldset class="md-form"> -->
+    <div class="md-form">
+        <lable for="male">Male</lable>
+        <input type="radio" id="male" class="form-control" name="gender" value="male" checked>
+        <lable for="female">Female</lable>
+        <input type="radio" id="female" class="form-control" name="gender" value="female">
+    </div>
+
+    <div class="md-form">
+        <i class="fa fa-envelope prefix grey-text"></i>
+        <input type="text" id="orangeForm-email" class="form-control" name="email">
+        <label for="orangeForm-email">Your email</label>
+    </div>
+
+    <div class="md-form">
+        <i class="fa fa-phone prefix grey-text"></i>
+        <input type="tel" id="icon_telephone" class="form-control" name="contact_no" pattern="[7-9]{1}[0-9]{9}" title="Ten Digits and 1st digit with 7-8 or 9" required />
+        <label for="icon_telephone"> Contact Number</label>
+    </div>
+
+    <div class="md-form">
+        <i class="fa fa-lock prefix grey-text"></i>
+        <input type="password" name="password" id="orangeForm-pass" class="form-control">
+        <label for="orangeForm-pass">Your password</label>
+    </div>
+
+    <div class="text-center">
+        <button class="btn btn-default" name="submit">Sign up</button>
+    </div>
+
+</form>
+
+</div>
+</div>
+<!-- Form register -->
+
+ <!--Section: Team v.1-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+</body>
+
+</html>

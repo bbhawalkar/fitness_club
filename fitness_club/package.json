@@ -1,0 +1,29 @@
+{
+  "name": "program",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "fs": "^0.0.1-security",
+    "html": "^1.0.0",
+    "mongoose": "^4.12.0",
+    "morgan": "^1.8.2",
+    "nodemailer": "^4.1.0",
+    "path": "^0.12.7",
+    "python": "0.0.4",
+    "randomstring": "^1.1.5",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
